@@ -88,8 +88,7 @@ const clean = () => {
 const syncServer = () => {
   server.init({
     server: 'build/',
-    // index: 'sitemap.html',
-    index: 'index.html',
+    index: 'sitemap.html',
     notify: false,
     open: true,
     cors: true,

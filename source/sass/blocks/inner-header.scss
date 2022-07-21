@@ -1,0 +1,105 @@
+.inner-header--background {
+  margin: 0 auto;
+
+  @media (min-width: $vp-1366) {
+    box-sizing: border-box;
+    width: 100%;
+    height: 650px;
+    background-color: $base-color-secondary;
+    background-image: url("../img/main-background-desktop.jpg");
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-background-desktop@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: $vp-1365) {
+    max-width: 768px;
+    height: 638px;
+    background-image: url("../img/main-background-tablet.jpg");
+    background-repeat: no-repeat;
+    box-shadow: none;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-background-tablet@2x.jpg");
+      background-size: contain;
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    max-width: 320px;
+    height: 500px;
+    background-image: url("../img/main-background-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-background-mobile@2x.jpg");
+      background-size: contain;
+    }
+  }
+}
+
+.inner-header__wrapper {
+  max-width: 970px;
+  padding: 283px 0 237px;
+  margin: 0 auto;
+
+  @media (max-width: $vp-1365) {
+    max-width: 678px;
+    padding: 280px 0 247px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $vp-767) {
+    max-width: 290px;
+    padding: 177px 0 153px;
+    margin: 0 auto;
+  }
+}
+
+.inner-header__wrapper h1 {
+  margin: 0;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  color: $base-color-primary;
+
+  @media (max-width: $vp-1365) {
+    margin-bottom: 29px;
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 25px;
+    font-size: 36px;
+    line-height: 125%;
+  }
+}
+
+.inner-header__wrapper p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: $base-color-primary;
+
+  @media (max-width: $vp-1365) {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 10px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 140%;
+  }
+}

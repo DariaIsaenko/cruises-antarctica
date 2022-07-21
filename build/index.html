@@ -14,47 +14,72 @@
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo-link " href="index.html"></a>
-    <button class="page-header__toggle" type="button"></button>
+    <div class="page-header__wrapper">
 
-    <!-- Навигация -->
+      <!-- Навигация -->
 
-    <nav class="page-header__main-nav main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            Преимущества
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            Направления
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            Ближайшие круизы
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            Контакты
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <!-- модификатор main-nav--opened для открытого состояния
+             модификатор main-nav--nojs для состояния без js
+             модификатор main-nav--closed для закрытого состояния -->
+
+      <nav class="page-header__main-nav main-nav main-nav--closed">
+        <a class="main-nav__link main-nav__link--logo" href="#">
+          <picture>
+            <source media="(min-width: 320px)" srcset="img/sprite/logo-mobile.svg">
+            <source media="(min-width: 768px)" srcset="img/sprite/logo-tablet.svg">
+            <img src="img/sprite/logo-desktop.svg" width="70" height="38" alt="Логотип турагенства.">
+          </picture>
+        </a>
+        <button class="main-nav__toggle" type="button"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              Преимущества
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              Направления
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              Ближайшие круизы
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
   </header>
 
   <main class="main">
-    <header class="inner-header">
-      <h1>Круизы в Антарктику</h1>
-      <p>Волшебный мир айсбергов и пингвинов</p>
+    <header class="inner-header inner-header--background">
+      <div class="inner-header__wrapper">
+        <h1>Круизы в Антарктику</h1>
+        <p>Волшебный мир айсбергов и пингвинов</p>
+      </div>
     </header>
     <section class="main__intro intro">
-      <h2>Путешествие на край Земли</h2>
-      <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный
-        лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов,
-        морских котиков и многое другое.</p>
+      <div class="intro__wrapper">
+        <h2>Путешествие на край Земли</h2>
+        <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный
+          лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов,
+          морских котиков и многое другое.</p>
+      </div>
+      <picture>
+        <!-- <source type="image/webp" media="(max-width: 767px)" srcset="img/main-inro-mobile.webp 1x, img/main-inro-mobile@2x.webp 2x">
+        <source type="image/webp" media="(max-width: 1365px)" srcset="imgmain-inro-tablet.webp 1x, img/main-inro-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/main-inro-desktop.webp 1x, img/main-inro-desktop@2x.webp 2x"> -->
+        <source media="(max-width: 767px)" srcset="img/main-inro-mobile.jpg 1x, img/main-inro-mobile@2x.jpg 2x">
+        <source media="(max-width: 1365px)" srcset="img/main-inro-tablet.jpg 1x, img//main-inro-tablet@2x.jpg 2x">
+        <img src="img/main-inro-desktop.jpg" srcset="img/main-inro-desktop@2x.jpg 2x" width="560" height="301" alt="Пингвины - одни из представителей фауны Антарктики.">
+      </picture>
     </section>
 
     <!-- Преимущества -->
@@ -317,10 +342,10 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__map">
-          <iframe class="contacts__map-contacts"
+          <!-- <iframe class="contacts__map-contacts"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.2072506006266!2d30.31867003361082!3d59.938719169054124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1643699140859!5m2!1sru!2sby"
             width="560" height="306" style="border: 0;" allowfullscreen="" loading="lazy"
-            title="Офис компании по адресу улица Большая Конюшенная, д. 19/8, Санкт-Петербург."></iframe>
+            title="Офис компании по адресу улица Большая Конюшенная, д. 19/8, Санкт-Петербург."></iframe> -->
         </div>
         <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
         <span>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</span>

@@ -1,0 +1,18 @@
+.main__intro {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 120px 103px;
+
+  @media (max-width: $vp-1365) {
+    width: 768px;
+    margin: 0 auto;
+    padding: 100px 45px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 320px;
+    flex-direction: column;
+    padding: 65px 15px;
+  }
+}

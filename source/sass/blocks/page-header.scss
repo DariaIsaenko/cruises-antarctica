@@ -1,0 +1,27 @@
+.page-header__wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-sizing: border-box;
+  width: 1366px;
+  padding: 35px 103px;
+  background-color: transparent;
+
+  @media (max-width: $vp-1365) {
+    width: 768px;
+    padding: 30px 45px;
+  }
+
+  @media (max-width: $vp-767) {
+    // padding: 9px 15px;
+    width: 320px;
+    padding: 0;
+  }
+}
+
+.page-header__main-nav {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
