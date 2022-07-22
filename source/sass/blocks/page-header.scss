@@ -1,7 +1,9 @@
-.page-header__wrapper {
+.page-header__main-nav  {
   position: absolute;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: space-between;
   margin: auto;
   box-sizing: border-box;
   width: 1366px;
@@ -14,7 +16,6 @@
   }
 
   @media (max-width: $vp-767) {
-    // padding: 9px 15px;
     width: 320px;
     padding: 0;
   }
@@ -22,6 +23,6 @@
 
 .page-header__main-nav {
   box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
+
 }
+

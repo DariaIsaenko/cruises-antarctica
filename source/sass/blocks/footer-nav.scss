@@ -1,0 +1,26 @@
+.footer-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $vp-767) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.footer-nav__link {
+  padding: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $base-color-primary;
+
+  @media (max-width: $vp-1365) {
+    padding: 11px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

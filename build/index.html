@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Круизы в Антарктику</title>
-  <link rel="preload" href="source/fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="source/fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="source/fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="source/fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -24,11 +24,9 @@
 
       <nav class="page-header__main-nav main-nav main-nav--closed">
         <a class="main-nav__link main-nav__link--logo" href="#">
-          <picture>
-            <source media="(min-width: 320px)" srcset="img/sprite/logo-mobile.svg">
-            <source media="(min-width: 768px)" srcset="img/sprite/logo-tablet.svg">
-            <img src="img/sprite/logo-desktop.svg" width="70" height="38" alt="Логотип турагенства.">
-          </picture>
+          <svg class="main-nav__link-icon" width="70" height="38">
+            <use xlink:href="img/sprite_auto.svg#logo-icon"></use>
+          </svg>
         </a>
         <button class="main-nav__toggle" type="button"></button>
         <ul class="main-nav__list">
@@ -74,44 +72,47 @@
       </div>
       <picture>
         <!-- <source type="image/webp" media="(max-width: 767px)" srcset="img/main-inro-mobile.webp 1x, img/main-inro-mobile@2x.webp 2x">
-        <source type="image/webp" media="(max-width: 1365px)" srcset="imgmain-inro-tablet.webp 1x, img/main-inro-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/main-inro-desktop.webp 1x, img/main-inro-desktop@2x.webp 2x"> -->
+          <source type="image/webp" media="(max-width: 1365px)" srcset="imgmain-inro-tablet.webp 1x, img/main-inro-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/main-inro-desktop.webp 1x, img/main-inro-desktop@2x.webp 2x"> -->
         <source media="(max-width: 767px)" srcset="img/main-inro-mobile.jpg 1x, img/main-inro-mobile@2x.jpg 2x">
         <source media="(max-width: 1365px)" srcset="img/main-inro-tablet.jpg 1x, img//main-inro-tablet@2x.jpg 2x">
-        <img src="img/main-inro-desktop.jpg" srcset="img/main-inro-desktop@2x.jpg 2x" width="560" height="301" alt="Пингвины - одни из представителей фауны Антарктики.">
+        <img src="img/main-inro-desktop.jpg" srcset="img/main-inro-desktop@2x.jpg 2x" width="560" height="301"
+          alt="Пингвины - одни из представителей фауны Антарктики.">
       </picture>
     </section>
 
     <!-- Преимущества -->
 
     <section class="advantages">
-      <h2>Преимущества</h2>
-      <ul class="advantages__list">
-        <li class="advantages__item">
-          <svg width="27" height="32">
-            <use href="img/sprite.svg#ship-desktop"></use>
-          </svg>
-          <h3>Небольшой круизный лайнер</h3>
-          <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность
-            насладиться видами и природой.</p>
-        </li>
-        <li class="advantages__item">
-          <svg width="38" height="21">
-            <use href="img/sprite.svg#check-mark-desktop"></use>
-          </svg>
-          <h3>Система все включено</h3>
-          <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас
-            24 часа.</p>
-        </li>
-        <li class="advantages__item">
-          <svg width="42" height="15">
-            <use href="img/sprite.svg#boat-desktop"></use>
-          </svg>
-          <h3>Экскурсионные туры на Zodiac</h3>
-          <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении
-            опытных экскурсоводов.</p>
-        </li>
-      </ul>
+      <div class="advantages__wrapper">
+        <h2>Преимущества</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <svg class="advantages__icon advantages__icon--ship" width="27" height="32">
+              <use xlink:href="img/sprite_auto.svg#ship-icon"></use>
+            </svg>
+            <h3>Небольшой круизный лайнер</h3>
+            <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность
+              насладиться видами и природой.</p>
+          </li>
+          <li class="advantages__item">
+            <svg class="advantages__icon advantages__icon--check-mark" width="38" height="21">
+              <use xlink:href="img/sprite_auto.svg#check-mark-icon"></use>
+            </svg>
+            <h3>Система все включено</h3>
+            <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас
+              24 часа.</p>
+          </li>
+          <li class="advantages__item">
+            <svg class="advantages__icon advantages__icon--boat" width="42" height="15">
+              <use xlink:href="img/sprite_auto.svg#boat-icon"></use>
+            </svg>
+            <h3>Экскурсионные туры на Zodiac</h3>
+            <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении
+              опытных экскурсоводов.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- Каталог -->
@@ -334,63 +335,70 @@
         <button class="form__button" type="submit">Отправить заявку</button>
       </form>
     </section>
+  </main>
 
     <footer class="page-footer">
 
       <!-- Контакты -->
 
       <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__map">
-          <!-- <iframe class="contacts__map-contacts"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.2072506006266!2d30.31867003361082!3d59.938719169054124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1643699140859!5m2!1sru!2sby"
-            width="560" height="306" style="border: 0;" allowfullscreen="" loading="lazy"
-            title="Офис компании по адресу улица Большая Конюшенная, д. 19/8, Санкт-Петербург."></iframe> -->
+        <div class="contacts__wrapper">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div class="contacts__map">
+            <iframe class="contacts__map-address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300157!2d30.320858714008043!3d59.93871916905672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1658483069754!5m2!1sru!2sby" width="560" height="306" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Офис компании по адресу улица Большая Конюшенная, д. 19/8, Санкт-Петербург."></iframe>
+          </div>
+          <div class="contacts__address">
+            <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
+            <span>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</span>
+            <a class="contacts__phone" href="tel:88002000000">8-800-200-00-00</a>
+          </div>
         </div>
-        <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
-        <span>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</span>
-        <span>8-800-200-00-00</span>
       </section>
 
       <!-- Навигация -->
 
-      <section class="page-footer__navigation navigation">
-        <h2 class="visually-hidden">Навигация по сайту</h2>
-        <a class="page-header__logo-link " href="index.html"></a>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
-              Преимущества
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
-              Направления
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
-              Ближайшие круизы
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
-              Контакты
-            </a>
-          </li>
-        </ul>
-      </section>
+      <section class="page-footer__main-content">
+        <div class="page-footer__nav  footer-nav">
+          <h2 class="visually-hidden">Навигация по сайту</h2>
+          <a class="page-footer__link" href="index.html">
+            <svg class="page-footer__icon" width="70" height="38">
+              <use xlink:href="img/sprite_auto.svg#logo-icon"></use>
+            </svg>
+          </a>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#">
+                Преимущества
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#">
+                Направления
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#">
+                Ближайшие круизы
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <!-- Социальные сети -->
+        <!-- Социальные сети -->
 
-      <section class="page-footer__social social">
+      <div class="page-footer__social social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#"
               aria-label="Страница турагенства в Facebook.">
               <svg class="social__link-icon" width="11" height="20">
-                <use href="img/sprite.svg#facebook-icon"></use>
+                <use xlink:href="img/sprite_auto.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
@@ -398,7 +406,7 @@
             <a class="social__link social__link--instagram" href="#"
               aria-label="Страница турагенства в Instagram.">
               <svg class="social__link-icon" width="20" height="20">
-                <use href="img/sprite.svg#instagram-icon"></use>
+                <use xlink:href="img/sprite_auto.svg#instagram-icon"></use>
               </svg>
             </a>
           </li>
@@ -406,13 +414,15 @@
             <a class="social__link social__link--twitter" href="#"
               aria-label="Страница турагенства в Twitter.">
               <svg class="social__link-icon" width="20" height="16">
-                <use href="img/sprite.svg#twitter-icon"></use>
+                <use xlink:href="img/sprite_auto.svg#twitter-icon"></use>
               </svg>
             </a>
           </li>
         </ul>
+      </div>
+
       </section>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>
