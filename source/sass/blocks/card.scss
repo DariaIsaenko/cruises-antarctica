@@ -1,0 +1,71 @@
+.card--state:hover {
+  justify-content: space-between;
+  padding: 30px 25px 35px;
+  background-color: $base-color-secondary;
+
+  .card__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 280px;
+  }
+
+  @media (max-width: $vp-1365) {
+    padding: 30px 35px 35px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 30px 26px 35px;
+  }
+}
+
+.card__wrapper {
+  display: none;
+}
+
+.card__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card__item {
+  margin-bottom: 10px;
+
+  @media (max-width: $vp-767) {
+  }
+}
+
+.card__item h4 {
+  margin: 0;
+  margin-bottom: 1px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-alice-blue;
+}
+
+.card__item p {
+  margin: 0;
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-alice-blue;
+}
+
+.card__link {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: $base-color-secondary;
+  background-color: $base-color-primary;
+}

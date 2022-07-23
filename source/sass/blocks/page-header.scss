@@ -1,3 +1,18 @@
+.page-header__wrapper {
+  position: relative;
+  width: 1366px;
+  margin: auto;
+
+  @media (max-width: $vp-1365) {
+    width: 768px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 320px;
+    margin: auto;
+  }
+}
+
 .page-header__main-nav  {
   position: absolute;
   left: 0;

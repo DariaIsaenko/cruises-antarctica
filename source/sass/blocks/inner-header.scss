@@ -44,12 +44,12 @@
 
 .inner-header__wrapper {
   max-width: 970px;
-  padding: 283px 0 237px;
+  padding: 270px 0 268px;
   margin: 0 auto;
 
   @media (max-width: $vp-1365) {
     max-width: 678px;
-    padding: 280px 0 247px;
+    padding: 269px 0 271px;
     margin: 0 auto;
   }
 
@@ -62,7 +62,7 @@
 
 .inner-header__wrapper h1 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 13px;
   font-style: normal;
   font-weight: 700;
   font-size: 54px;
@@ -70,13 +70,13 @@
   color: $base-color-primary;
 
   @media (max-width: $vp-1365) {
-    margin-bottom: 29px;
+    margin-bottom: 17px;
     font-size: 50px;
     line-height: 61px;
   }
 
   @media (max-width: $vp-767) {
-    margin-bottom: 25px;
+    margin-bottom: 11px;
     font-size: 36px;
     line-height: 125%;
   }

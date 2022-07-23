@@ -1,6 +1,6 @@
 .intro__wrapper {
   max-width: 512px;
-  padding: 66px 0 56px;
+  padding: 58px 0 64px;
 
   @media (max-width: $vp-1365) {
     max-width: 324px;
@@ -14,7 +14,7 @@
 
 .intro__wrapper h2 {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 22px;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -22,7 +22,7 @@
   color: $base-color-secondary;
 
   @media (max-width: $vp-1365) {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     font-size: 26px;
     line-height: 36px;
   }
@@ -44,6 +44,10 @@
 
   @media (max-width: $vp-767) {
     margin-bottom: 40px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 32px;
   }
 }
 

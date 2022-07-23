@@ -2,17 +2,17 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 120px 103px;
+  padding: 120px 103px 81px;
 
   @media (max-width: $vp-1365) {
     width: 768px;
     margin: 0 auto;
-    padding: 100px 45px;
+    padding: 91px 45px 83px;
   }
 
   @media (max-width: $vp-767) {
     width: 320px;
     flex-direction: column;
-    padding: 65px 15px;
+    padding: 57px 15px;
   }
 }
