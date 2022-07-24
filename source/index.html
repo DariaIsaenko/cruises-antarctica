@@ -333,22 +333,26 @@
     <!-- Форма -->
 
     <section class="booking">
-      <h2>Раннее бронирование</h2>
-      <p>Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
-      <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
-      <form class="booking__form form" action="https://echo.htmlacademy.ru/" method="get">
-        <label class="visually-hidden" for="form-name">name</label>
-        <input id="form-name" type="text" placeholder="Имя" pattern="[А-Яа-яЁё]{1,18}" name="name">
-        <label class="visually-hidden" for="form-email">email</label>
-        <input id="form-email" type="email" placeholder="Email" name="email">
-        <label class="visually-hidden" for="form-phone">phone</label>
-        <input id="form-phone" type="tel" placeholder="Телефон" pattern="#" name="phone">
-        <div class="form__checkbox">
-          <input id="form-checkbox" type="checkbox" name="agree">
-          <label class="form__label" for="form-checkbox">Я согласен на обработку моих персональных данных</label>
+      <div class="booking__wrapper">
+        <div class="booking__promo">
+          <h2>Раннее бронирование</h2>
+          <p>Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
         </div>
-        <button class="form__button" type="submit">Отправить заявку</button>
-      </form>
+        <form class="booking__form form" action="https://echo.htmlacademy.ru/" method="get">
+          <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+          <label class="visually-hidden" for="form-name">name</label>
+          <input id="form-name" type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{1,}" name="name" required>
+          <label class="visually-hidden" for="form-phone">phone</label>
+          <input id="form-phone" type="tel" placeholder="Телефон" pattern="[0-9]{1,12}" name="phone" required>
+          <label class="visually-hidden" for="form-email">email</label>
+          <input id="form-email" type="email" placeholder="Email" name="email" required>
+          <div class="form__checkbox">
+            <input id="form-checkbox" type="checkbox" name="agree" required checked>
+            <label for="form-checkbox">Я согласен на обработку моих персональных данных</label>
+          </div>
+          <button class="form__button" type="submit">Отправить заявку</button>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -435,7 +439,6 @@
           </li>
         </ul>
       </div>
-
       </section>
     </footer>
     <script src="js/main.min.js"></script>
