@@ -1,22 +1,24 @@
-.card--state:hover {
+.card--state:hover,
+.card--state:focus {
   justify-content: space-between;
-  padding: 30px 25px 35px;
-  background-color: $base-color-secondary;
+  padding: 29px 25px 35px;
+  background-color: $color-tangaroa;
+  outline: none;
 
-  .card__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 280px;
-  }
+   .card__wrapper {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     min-height: 280px;
+   }
 
-  @media (max-width: $vp-1365) {
-    padding: 30px 35px 35px;
-  }
+   @media (max-width: $vp-1365) {
+     padding: 30px 35px 35px;
+   }
 
-  @media (max-width: $vp-767) {
-    padding: 30px 26px 35px;
-  }
+   @media (max-width: $vp-767) {
+     padding: 27px 26px 35px;
+   }
 }
 
 .card__wrapper {
@@ -58,7 +60,7 @@
 
 .card__link {
   width: 100%;
-  height: 40px;
+  min-height: 40px;
   box-sizing: border-box;
   padding-top: 9px;
   padding-bottom: 10px;
@@ -66,6 +68,20 @@
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  color: $base-color-secondary;
-  background-color: $base-color-primary;
+  color: $color-tangaroa;
+  background-color: $color-alice-blue;
+  cursor: pointer;
+  user-select: none;
+
+  @media (min-width: $vp-1366) {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

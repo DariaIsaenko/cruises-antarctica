@@ -5,10 +5,12 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  color: $base-color-primary;
+  color: $color-alice-blue;
 
   @media (max-width: $vp-767) {
-    margin-bottom: 27px;
+    min-height: 75px;
+    max-width: 303px;
+    margin: 0 auto 27px;
     line-height: 25px;
     text-align: center;
   }
@@ -23,9 +25,17 @@ form input {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: $base-color-secondary;
-  background-color: $base-color-primary;
+  color: $color-tangaroa;
+  background-color: $color-alice-blue;
   border: none;
+
+  @media (min-width:$vp-1366) {
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 0 1px 2px $color-tangaroa-transparent;
+      outline: none;
+    }
+  }
 }
 
 form input::placeholder {
@@ -42,6 +52,8 @@ form input::placeholder {
 
   @media (max-width: $vp-767) {
     display: flex;
+    margin-bottom: 29px;
+    min-height: 24px;
   }
 }
 
@@ -54,6 +66,43 @@ form input::placeholder {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.form__checkbox label {
+  padding-left: 22px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: $color-alice-blue;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: -1px;
+    width: 18px;
+    height: 18px;
+    background-color: $color-alice-blue;
+
+    @media (max-width: $vp-767) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    align-self: center;
+    padding-left: 29px;
+    line-height: 12px;
+  }
+}
+
+.form__checkbox input:hover + label::before,
+.form__checkbox input:focus + label::before {
+  box-shadow: inset 0 0 1px 1.5px $color-tangaroa-transparent;
+  outline: none;
 }
 
 .form__checkbox input:checked + label::after {
@@ -72,34 +121,6 @@ form input::placeholder {
   }
 }
 
-.form__checkbox label {
-  padding-left: 22px;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 13px;
-  color: $base-color-primary;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 3px;
-    left: -1px;
-    width: 18px;
-    height: 18px;
-    background-color: $base-color-primary;
-
-    @media (max-width: $vp-767) {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  @media (max-width: $vp-767) {
-    padding-left: 29px;
-    line-height: 12px;
-  }
-}
-
 .form__button {
   box-sizing: border-box;
   width: 100%;
@@ -108,6 +129,20 @@ form input::placeholder {
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  color: $base-color-secondary;
+  color: $color-tangaroa;
   border: none;
+  cursor: pointer;
+  user-select: none;
+
+  @media (min-width:$vp-1366) {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

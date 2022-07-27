@@ -1,39 +1,54 @@
-.advantages__wrapper  {
-  padding: 110px 103px 119px;
-  max-width: 1366px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  background-color: $bg-color-advantages;
-  background-image: url("../img/advantages-bg-desktop.jpg");
+.advantages--background {
+  width: 100%;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $color-solitude;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/advantages-bg-desktop@2x.jpg");
-    background-size: cover;
+  @media (min-width: $vp-1366) {
+    min-height: 562px;
+    background-image: url("../img/advantages-bg-desktop.webp");
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantages-bg-desktop@2x.webp");
+    }
   }
 
   @media (max-width: $vp-1365) {
-    padding: 90px 45px 100px;
-    max-width: 768px;
-    background-image: url("../img/advantages-bg-tablet.jpg");
+    min-height: 588px;
+    background-image: url("../img/advantages-bg-tablet.webp");
+    box-shadow: none;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/advantages-bg-tablet@2x.jpg");
-    background-size: cover;
-  }
-
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantages-bg-tablet@2x.webp");
+    }
   }
 
   @media (max-width: $vp-767) {
-    padding: 58px 15px 66px;
-    max-width: 320px;
-    background-image: url("../img/advantages-bg-mobile.jpg");
+    min-height: 997px;
+    background-image: url("../img/advantages-bg-mobile.webp");
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/advantages-bg-mobile@2x.jpg");
-    background-size: cover;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantages-bg-mobile@2x.webp");
+    }
+  }
+}
+
+.advantages__wrapper  {
+  padding: 110px 103px 89px;
+  max-width: 1366px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: $vp-1365) {
+    padding: 90px 45px 70px;
+    max-width: 768px;
   }
 
+  @media (max-width: $vp-767) {
+    padding: 58px 15px 65px;
+    max-width: 320px;
   }
 }
 
@@ -44,7 +59,7 @@
   font-size: 28px;
   line-height: 42px;
   text-align: center;
-  color: $base-color-secondary;
+  color: $color-tangaroa;
 
   @media (max-width: $vp-1365) {
     font-size: 26px;
@@ -61,6 +76,7 @@
 
 .advantages__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -75,26 +91,26 @@
 .advantages__item {
   position: relative;
   box-sizing: border-box;
-  max-height: 241px;
   width: 360px;
-  padding: 80px 34px 30px 30px;
-  background-color: $base-color-primary;
+  min-height: 241px;
+  padding: 78px 23px 25px 27px;
+  margin-bottom: 30px;
+  background-color: $color-alice-blue;
 
   @media (max-width: $vp-1365) {
     width: 207px;
-    max-height: 310px;
-    padding: 71px 16px 25px 20px;
+    padding: 71px 16px 20px 20px;
   }
 
   @media (max-width: $vp-767) {
     width: 100%;
-    max-height: 249px;
-    height: 250px;
-    padding: 72px 15px 25px 20px;
+    min-height: 250px;
+    padding: 72px 15px 19px 20px;
+    margin-bottom: 0;
   }
 }
 
-.advantages__icon {
+.advantages__item svg {
   position: absolute;
   content: "";
   top: 30px;
@@ -104,22 +120,16 @@
     top: 25px;
     left: 20px;
   }
-
-  @media (max-width: $vp-767) {
-  }
 }
 
-.advantages__icon--ship {
+.advantages__item--ship svg {
   @media (max-width: $vp-1365) {
     width: 21px;
     height: 26px;
   }
-
-  @media (max-width: $vp-767) {
-  }
 }
 
-.advantages__icon--check-mark {
+.advantages__item--check-mark svg{
   transform: translateY(5px);
 
   @media (max-width: $vp-1365) {
@@ -127,12 +137,9 @@
     height: 19px;
     transform: translateY(4px);
   }
-
-  @media (max-width: $vp-767) {
-  }
 }
 
-.advantages__icon--boat {
+.advantages__item--boat svg {
   transform: translateY(8px);
 
   @media (max-width: $vp-1365) {
@@ -145,7 +152,6 @@
   }
 }
 
-
 .advantages__item h3 {
   margin: 0;
   margin-bottom: 9px;
@@ -153,13 +159,10 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  color: $base-color-secondary;
+  color: $color-tangaroa;
 
   @media (max-width: $vp-1365) {
     line-height: 25px;
-  }
-
-  @media (max-width: $vp-767) {
   }
 }
 
@@ -169,8 +172,5 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: $base-color-secondary;
-
-  @media (max-width: $vp-767) {
-  }
+  color: $color-tangaroa;
 }

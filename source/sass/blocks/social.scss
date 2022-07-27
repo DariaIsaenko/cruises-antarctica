@@ -1,5 +1,7 @@
 .social__list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 206px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -7,34 +9,43 @@
 
 .social__link {
   padding: 11px 14px;
+  cursor: pointer;
+
+  @media (min-width: $vp-1366) {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
+  }
 
   @media (max-width: $vp-1365) {
     padding: 10px 11px;
   }
 }
 
+.social__link svg {
+  vertical-align: baseline;
+}
 
-.social__link--facebook .social__link-icon{
+
+.social__link--facebook svg {
   @media (max-width: $vp-1365) {
     width: 9px;
     height: 16px;
   }
 }
 
-.social__link--instagram .social__link-icon{
+.social__link--instagram svg {
   @media (max-width: $vp-1365) {
     width: 16px;
       height: 16px;
   }
 }
 
-.social__link--twitter .social__link-icon{
+.social__link--twitter svg {
   @media (max-width: $vp-1365) {
     width: 16px;
     height: 13px;
   }
-}
-
-.social__link-icon {
-  vertical-align: baseline;
 }

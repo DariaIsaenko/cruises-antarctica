@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $vp-767) {
-    width: 320px;
+    width: 100%;
     margin: auto;
   }
 }
@@ -22,16 +22,16 @@
   margin: auto;
   box-sizing: border-box;
   width: 1366px;
-  padding: 35px 103px;
+  padding: 33px 91px 35px 103px;
   background-color: transparent;
 
   @media (max-width: $vp-1365) {
     width: 768px;
-    padding: 30px 45px;
+    padding: 27px 27px 27px 46px;
   }
 
   @media (max-width: $vp-767) {
-    width: 320px;
+    width: 100%;
     padding: 0;
   }
 }

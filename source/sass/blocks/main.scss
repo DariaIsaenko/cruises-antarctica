@@ -1,6 +1,7 @@
 .main__intro {
   display: flex;
   justify-content: space-between;
+
   max-width: 1366px;
   margin: auto;
   box-sizing: border-box;
@@ -8,6 +9,7 @@
 
   @media (max-width: $vp-1365) {
     width: 768px;
+    align-items: center;
     margin: 0 auto;
     padding: 91px 45px 83px;
   }
