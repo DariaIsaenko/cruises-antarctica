@@ -5,7 +5,7 @@
   max-width: 1366px;
   margin: auto;
   box-sizing: border-box;
-  padding: 120px 103px 81px;
+  padding: 120px 103px 105px;
 
   @media (max-width: $vp-1365) {
     width: 768px;
@@ -17,6 +17,6 @@
   @media (max-width: $vp-767) {
     width: 320px;
     flex-direction: column;
-    padding: 57px 15px;
+    padding: 57px 15px 65px;
   }
 }

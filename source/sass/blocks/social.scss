@@ -11,16 +11,18 @@
   padding: 11px 14px;
   cursor: pointer;
 
-  @media (min-width: $vp-1366) {
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-      outline: none;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   @media (max-width: $vp-1365) {
     padding: 10px 11px;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -39,7 +41,7 @@
 .social__link--instagram svg {
   @media (max-width: $vp-1365) {
     width: 16px;
-      height: 16px;
+    height: 16px;
   }
 }
 

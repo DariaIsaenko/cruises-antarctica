@@ -26,7 +26,7 @@
              модификатор is-closed для закрытого состояния -->
 
       <nav class="page-header__main-nav main-nav is-closed is-nojs">
-        <a class="main-nav__link main-nav__link--logo" href="#">
+        <a class="main-nav__link main-nav__link--logo" href="#" aria-label="Логотип-ссылка на главную страницу.">
           <svg width="70" height="38">
             <use xlink:href="img/sprite_auto.svg#logo-icon"></use>
           </svg>
@@ -36,7 +36,7 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--advantages" href="#">
+            <a class="main-nav__link main-nav__link--advantages" href="#advantages">
               Преимущества
             </a>
           </li>
@@ -75,21 +75,16 @@
           пингвинов, китов,
           морских котиков и&nbsp;многое другое.</p>
       </div>
-      <picture>
-        <source type="image/webp" media="(max-width: 767px)"
-          srcset="img/main-inro-mobile.webp 1x, img/main-inro-mobile@2x.webp 2x">
-        <source type="image/webp" media="(max-width: 1365px)"
-          srcset="img/main-inro-tablet.webp 1x, img/main-inro-tablet@2x.webp 2x">
-        <source type="image/webp"
-          srcset="img/main-inro-mobile.webp 1x, img/main-inro-mobile@2x.webp 2x">
-        <!-- 1х: 290x186px; 2x: 580x372px -->
-        <source media="(max-width: 767px)" srcset="img/main-inro-mobile.jpg 1x, img/main-inro-mobile@2x.jpg 2x">
-        <!-- 1х: 324x264px; 2x: 648x528px -->
-        <source media="(max-width: 1365px)" srcset="img/main-inro-tablet.jpg 1x, img/main-inro-tablet@2x.jpg 2x">
-        <!-- 1х: 560x301px; 2x: 1120x602px -->
-        <img src="img/main-inro-desktop.jpg" srcset="img/main-inro-desktop@2x.jpg 2x" width="560" height="301"
-          alt="Пингвины - одни из представителей фауны Антарктики.">
-      </picture>
+      <div class="intro__img">
+        <picture>
+          <source type="image/webp"
+            srcset="img/main-inro.webp 1x, img/main-inro@2x.webp 2x">
+          <!-- 1х: 560x301px; 2x: 1120x602px -->
+          <img src="img/main-inro.jpg" srcset="img/main-inro@2x.jpg 2x" width="560" height="301"
+            alt="Пингвины - одни из представителей фауны Антарктики.">
+        </picture>
+      </div>
+
     </section>
 
     <!-- Преимущества -->
@@ -138,7 +133,7 @@
             <picture>
               <source type="image/webp" srcset="img/catalog/antarctic-catalog-1.webp 1x, img/catalog/antarctic-catalog-1@2x.webp 2x">
               <!-- 1х: 260x386px; 2x: 520x772px -->
-              <img src="img/catalog/antarctic-catalog-1.jpg" srcset="img/catalog/antarctic-catalog-1@2x.jpg 2x" width="260" height="386" alt="#">
+              <img src="img/catalog/antarctic-catalog-1.jpg" srcset="img/catalog/antarctic-catalog-1@2x.jpg 2x" width="260" height="386" alt="Природа Антарктиды.">
             </picture>
             <div class="card__wrapper">
               <ul class="card__list">
@@ -167,7 +162,7 @@
             <picture>
               <source type="image/webp" srcset="img/catalog/antarctic-catalog-2.webp 1x, img/catalog/antarctic-catalog-2@2x.webp 2x">
               <!-- 1х: 260x386px; 2x: 520x772px -->
-              <img src="img/catalog/antarctic-catalog-2.jpg" srcset="img/catalog/antarctic-catalog-2@2x.jpg 2x" width="260" height="386" alt="#">
+              <img src="img/catalog/antarctic-catalog-2.jpg" srcset="img/catalog/antarctic-catalog-2@2x.jpg 2x" width="260" height="386" alt="Природа Антарктиды.">
             </picture>
             <div class="card__wrapper">
               <ul class="card__list">
@@ -196,7 +191,7 @@
             <picture>
               <source type="image/webp" srcset="img/catalog/antarctic-catalog-3.webp 1x, img/catalog/antarctic-catalog-1@2x.webp 3x">
               <!-- 1х: 260x386px; 2x: 520x772px -->
-              <img src="img/catalog/antarctic-catalog-3.jpg" srcset="img/catalog/antarctic-catalog-3@2x.jpg 2x" width="260" height="386" alt="#">
+              <img src="img/catalog/antarctic-catalog-3.jpg" srcset="img/catalog/antarctic-catalog-3@2x.jpg 2x" width="260" height="386" alt="Природа Антарктиды.">
             </picture>
             <div class="card__wrapper">
               <ul class="card__list">
@@ -225,7 +220,7 @@
             <picture>
               <source type="image/webp" srcset="img/catalog/antarctic-catalog-4.webp 1x, img/catalog/antarctic-catalog-4@2x.webp 2x">
               <!-- 1х: 260x386px; 2x: 520x772px -->
-              <img src="img/catalog/antarctic-catalog-4.jpg" srcset="img/catalog/antarctic-catalog-4@2x.jpg 2x" width="260" height="386" alt="#">
+              <img src="img/catalog/antarctic-catalog-4.jpg" srcset="img/catalog/antarctic-catalog-4@2x.jpg 2x" width="260" height="386" alt="Природа Антарктиды.">
             </picture>
             <div class="card__wrapper">
               <ul class="card__list">
@@ -254,7 +249,7 @@
             <picture>
               <source type="image/webp" srcset="img/catalog/antarctic-catalog-5.webp 1x, img/catalog/antarctic-catalog-5@2x.webp 2x">
               <!-- 1х: 260x386px; 2x: 520x772px -->
-              <img src="img/catalog/antarctic-catalog-5.jpg" srcset="img/catalog/antarctic-catalog-5@2x.jpg 2x" width="260" height="386" alt="#">
+              <img src="img/catalog/antarctic-catalog-5.jpg" srcset="img/catalog/antarctic-catalog-5@2x.jpg 2x" width="260" height="386" alt="Природа Антарктиды.">
             </picture>
             <div class="card__wrapper">
               <ul class="card__list">
@@ -283,7 +278,7 @@
             <picture>
               <source type="image/webp" srcset="img/catalog/antarctic-catalog-6.webp 1x, img/catalog/antarctic-catalog-6@2x.webp 2x">
               <!-- 1х: 260x386px; 2x: 520x772px -->
-              <img src="img/catalog/antarctic-catalog-6.jpg" srcset="img/catalog/antarctic-catalog-6@2x.jpg 2x" width="260" height="386" alt="#">
+              <img src="img/catalog/antarctic-catalog-6.jpg" srcset="img/catalog/antarctic-catalog-6@2x.jpg 2x" width="260" height="386" alt="Природа Антарктиды.">
             </picture>
             <div class="card__wrapper">
               <ul class="card__list">
@@ -312,7 +307,7 @@
             <picture>
               <source type="image/webp" srcset="img/catalog/antarctic-catalog-2.webp 1x, img/catalog/antarctic-catalog-2@2x.webp 2x">
               <!-- 1х: 260x386px; 2x: 520x772px -->
-              <img src="img/catalog/antarctic-catalog-2.jpg" srcset="img/catalog/antarctic-catalog-2@2x.jpg 2x" width="260" height="386" alt="#">
+              <img src="img/catalog/antarctic-catalog-2.jpg" srcset="img/catalog/antarctic-catalog-2@2x.jpg 2x" width="260" height="386" alt="Природа Антарктиды.">
             </picture>
             <div class="card__wrapper">
               <ul class="card__list">
@@ -341,7 +336,7 @@
             <picture>
               <source type="image/webp" srcset="img/catalog/antarctic-catalog-8.webp 1x, img/catalog/antarctic-catalog-8@2x.webp 2x">
               <!-- 1х: 260x386px; 2x: 520x772px -->
-              <img src="img/catalog/antarctic-catalog-8.jpg" srcset="img/catalog/antarctic-catalog-8@2x.jpg 2x" width="260" height="386" alt="#">
+              <img src="img/catalog/antarctic-catalog-8.jpg" srcset="img/catalog/antarctic-catalog-8@2x.jpg 2x" width="260" height="386" alt="Природа Антарктиды.">
             </picture>
             <div class="card__wrapper">
               <ul class="card__list">
@@ -433,7 +428,7 @@
       <div class="footer-main__wrapper">
         <div class="footer-main__nav  footer-nav">
           <h2 class="visually-hidden">Навигация по сайту</h2>
-          <a class="footer-main__link" href="index.html">
+          <a class="footer-main__link" href="index.html" aria-label="Логотип-ссылка на главную страницу.">
             <svg width="70" height="38">
               <use xlink:href="img/sprite_auto.svg#logo-icon"></use>
             </svg>

@@ -4,15 +4,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $color-solitude;
+  min-height: 555px;
+  background-image: url("../img/booking-background-desktop.webp");
 
-  @media (min-width: $vp-1366) {
-    min-height: 555px;
-    background-image: url("../img/booking-background-desktop.webp");
-
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/booking-background-desktop@2x.webp");
-    }
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/booking-background-desktop@2x.webp");
   }
 
   @media (max-width: $vp-1365) {
@@ -70,7 +66,7 @@
   }
 }
 
-.booking__promo  h2 {
+.booking__promo h2 {
   margin: 0;
   margin-bottom: 10px;
   font-weight: 700;
@@ -94,7 +90,7 @@
   }
 }
 
-.booking__promo  p {
+.booking__promo p {
   margin: 0;
   max-width: 352px;
   font-weight: 400;

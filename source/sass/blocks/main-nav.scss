@@ -42,12 +42,10 @@
   cursor: pointer;
   user-select: none;
 
-  @media (min-width: $vp-1366) {
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-      outline: none;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   &:active {
@@ -58,6 +56,10 @@
     padding: 5px;
     font-size: 14px;
     line-height: 17px;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   @media (max-width: $vp-767) {
@@ -157,7 +159,7 @@
     display: none;
   }
 
-  .main-nav.is-opened .main-nav__list{
+  .main-nav.is-opened .main-nav__list {
     display: block;
     padding: 18px 15px;
     flex-direction: column;
@@ -192,7 +194,7 @@
     grid-column: 1 / 2;
   }
 
-  .main-nav.is-opened .main-nav__link--logo svg{
+  .main-nav.is-opened .main-nav__link--logo svg {
     fill: $color-tangaroa;
   }
 

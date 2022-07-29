@@ -1,6 +1,6 @@
 .intro__wrapper {
   max-width: 512px;
-  padding: 58px 0 64px;
+  padding: 55px 0 66px;
 
   @media (max-width: $vp-1365) {
     max-width: 324px;
@@ -51,7 +51,7 @@
   }
 }
 
-.intro img {
+.intro__img {
   width: 560px;
   height: 301px;
 
@@ -66,4 +66,8 @@
   }
 }
 
-
+.intro__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

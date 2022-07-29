@@ -30,20 +30,22 @@
 
 .footer-main__link {
   padding: 0 15px;
-  margin-right: 2px;
+  margin-right: 5px;
   align-self: center;
 
-  @media (min-width: $vp-1366) {
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-      outline: none;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   @media (max-width: $vp-1365) {
     padding: 0 12px;
     margin-right: 3px;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   @media (max-width: $vp-767) {

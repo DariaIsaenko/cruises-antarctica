@@ -25,7 +25,7 @@
 }
 
 .footer-nav__link {
-  padding: 15px;
+  padding: 12px 15px 18px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -34,12 +34,10 @@
   cursor: pointer;
   user-select: none;
 
-  @media (min-width: $vp-1366) {
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-      outline: none;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   &:active {
@@ -50,6 +48,10 @@
     padding: 11px;
     font-size: 12px;
     line-height: 15px;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   @media (max-width: $vp-767) {

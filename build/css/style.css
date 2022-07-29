@@ -93,11 +93,6 @@ a {
   background-color: transparent;
 }
 
-.page-header__main-nav {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 .main-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,6 +127,12 @@ a {
   user-select: none;
 }
 
+.main-nav__link:hover,
+.main-nav__link:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
 .main-nav__link:active {
   opacity: 0.3;
 }
@@ -161,15 +162,21 @@ a {
   margin: auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 120px 103px 81px;
+  padding: 120px 103px 105px;
 }
 
 .inner-header--background {
   width: 100%;
+  min-height: 650px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #011c40;
   background-size: cover;
+  -webkit-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-image: url("../img/main-background-desktop.webp");
 }
 
 .inner-header__wrapper {
@@ -200,7 +207,7 @@ a {
 
 .intro__wrapper {
   max-width: 512px;
-  padding: 58px 0 64px;
+  padding: 55px 0 66px;
 }
 
 .intro__wrapper h2 {
@@ -223,9 +230,16 @@ a {
   color: #011c40;
 }
 
-.intro img {
+.intro__img {
   width: 560px;
   height: 301px;
+}
+
+.intro__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .advantages--background {
@@ -274,7 +288,7 @@ a {
   box-sizing: border-box;
   width: 360px;
   min-height: 241px;
-  padding: 78px 23px 25px 27px;
+  padding: 78px 23px 25px 30px;
   margin-bottom: 30px;
   background-color: #f9fbfd;
 }
@@ -464,6 +478,12 @@ a {
   user-select: none;
 }
 
+.card__link:hover,
+.card__link:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
 .card__link:active {
   opacity: 0.3;
 }
@@ -474,6 +494,8 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #e3ecf6;
+  min-height: 555px;
+  background-image: url("../img/booking-background-desktop.webp");
 }
 
 .booking__wrapper {
@@ -544,6 +566,13 @@ form input {
   color: #011c40;
   background-color: #f9fbfd;
   border: none;
+}
+
+form input:hover,
+form input:focus {
+  -webkit-box-shadow: inset 0 0 1px 2px rgba(1, 28, 64, 0.7);
+  box-shadow: inset 0 0 1px 2px rgba(1, 28, 64, 0.7);
+  outline: none;
 }
 
 form input::-webkit-input-placeholder {
@@ -657,6 +686,12 @@ form input::placeholder {
   user-select: none;
 }
 
+.form__button:hover,
+.form__button:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
 .form__button:active {
   opacity: 0.3;
 }
@@ -679,7 +714,7 @@ form input::placeholder {
   box-sizing: border-box;
   max-width: 1366px;
   margin: 0 auto;
-  padding: 120px 103px 110px;
+  padding: 120px 103px 120px;
 }
 
 .contacts__map {
@@ -753,6 +788,12 @@ form input::placeholder {
   cursor: pointer;
 }
 
+.contacts__phone:hover,
+.contacts__phone:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
 .contacts__phone:active {
   opacity: 0.3;
 }
@@ -784,10 +825,16 @@ form input::placeholder {
 
 .footer-main__link {
   padding: 0 15px;
-  margin-right: 2px;
+  margin-right: 5px;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+}
+
+.footer-main__link:hover,
+.footer-main__link:focus {
+  opacity: 0.6;
+  outline: none;
 }
 
 .footer-main__link svg {
@@ -811,7 +858,7 @@ form input::placeholder {
 }
 
 .footer-nav__link {
-  padding: 15px;
+  padding: 12px 15px 18px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -822,6 +869,12 @@ form input::placeholder {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.footer-nav__link:hover,
+.footer-nav__link:focus {
+  opacity: 0.6;
+  outline: none;
 }
 
 .footer-nav__link:active {
@@ -845,84 +898,27 @@ form input::placeholder {
   cursor: pointer;
 }
 
+.social__link:hover,
+.social__link:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
 .social__link svg {
   vertical-align: baseline;
 }
 
-/* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
-  &:focus {
-    color: $color-default-white;
-  }
-} */
-
 @media (min-width: 1366px) {
-  .main-nav__link:hover,
-  .main-nav__link:focus {
-    opacity: 0.6;
-    outline: none;
-  }
-
   .inner-header--background {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 650px;
     background-image: url("../img/main-background-desktop.webp");
-    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .advantages--background {
     min-height: 562px;
     background-image: url("../img/advantages-bg-desktop.webp");
-  }
-
-  .card__link:hover,
-  .card__link:focus {
-    opacity: 0.6;
-    outline: none;
-  }
-
-  .booking--background {
-    min-height: 555px;
-    background-image: url("../img/booking-background-desktop.webp");
-  }
-
-  form input:hover,
-  form input:focus {
-    -webkit-box-shadow: inset 0 0 1px 2px rgba(1, 28, 64, 0.7);
-    box-shadow: inset 0 0 1px 2px rgba(1, 28, 64, 0.7);
-    outline: none;
-  }
-
-  .form__button:hover,
-  .form__button:focus {
-    opacity: 0.6;
-    outline: none;
-  }
-
-  .contacts__phone:hover,
-  .contacts__phone:focus {
-    opacity: 0.6;
-    outline: none;
-  }
-
-  .footer-main__link:hover,
-  .footer-main__link:focus {
-    opacity: 0.6;
-    outline: none;
-  }
-
-  .footer-nav__link:hover,
-  .footer-nav__link:focus {
-    opacity: 0.6;
-    outline: none;
-  }
-
-  .social__link:hover,
-  .social__link:focus {
-    opacity: 0.6;
-    outline: none;
   }
 }
 
@@ -934,9 +930,11 @@ form input::placeholder {
   .advantages--background {
     background-image: url("../img/advantages-bg-desktop@2x.webp");
   }
+}
 
-  .booking--background {
-    background-image: url("../img/booking-background-desktop@2x.webp");
+@media (max-width: 1366px) {
+  .contacts__phone:hover {
+    opacity: 1;
   }
 }
 
@@ -963,6 +961,10 @@ form input::placeholder {
     padding: 5px;
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .main-nav__link:hover {
+    opacity: 1;
   }
 
   .main-nav__link.main-nav__link--logo {
@@ -1022,7 +1024,7 @@ form input::placeholder {
     line-height: 36px;
   }
 
-  .intro img {
+  .intro__img {
     width: 324px;
     height: 264px;
   }
@@ -1108,6 +1110,10 @@ form input::placeholder {
     padding: 30px 35px 35px;
   }
 
+  .card__link:hover {
+    opacity: 1;
+  }
+
   .booking--background {
     min-height: 805px;
     background-image: url("../img/booking-background-tablet.webp");
@@ -1150,9 +1156,17 @@ form input::placeholder {
     align-self: center;
   }
 
+  form input:hover {
+    opacity: 1;
+  }
+
+  .form__button:hover {
+    opacity: 1;
+  }
+
   .contacts__wrapper {
     max-width: 768px;
-    padding: 100px 45px 93px;
+    padding: 100px 45px 95px;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
@@ -1199,6 +1213,10 @@ form input::placeholder {
     margin-right: 3px;
   }
 
+  .footer-main__link:hover {
+    opacity: 1;
+  }
+
   .footer-main__link svg {
     width: 38px;
     height: 20px;
@@ -1218,8 +1236,16 @@ form input::placeholder {
     line-height: 15px;
   }
 
+  .footer-nav__link:hover {
+    opacity: 1;
+  }
+
   .social__link {
     padding: 10px 11px;
+  }
+
+  .social__link:hover {
+    opacity: 1;
   }
 
   .social__link--facebook svg {
@@ -1453,7 +1479,7 @@ form input::placeholder {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 57px 15px;
+    padding: 57px 15px 65px;
   }
 
   .inner-header--background {
@@ -1496,7 +1522,7 @@ form input::placeholder {
     margin-bottom: 32px;
   }
 
-  .intro img {
+  .intro__img {
     width: 290px;
     height: 186px;
   }
@@ -1534,7 +1560,7 @@ form input::placeholder {
 
   .catalog__wrapper {
     width: 100%;
-    padding: 58px 25px 65px;
+    padding: 56px 25px 65px;
   }
 
   .catalog__list {
@@ -1641,7 +1667,7 @@ form input::placeholder {
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     max-width: 320px;
-    padding: 57px 15px 64px;
+    padding: 57px 15px 65px;
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
     column-gap: 0;
@@ -1748,6 +1774,14 @@ form input::placeholder {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .inner-header--background {
+    background-image: url("../img/main-background-desktop@2x.webp");
+  }
+
+  .booking--background {
+    background-image: url("../img/booking-background-desktop@2x.webp");
+  }
+
   .contacts__map {
     background-image: url("../img/map-desktop@2x.webp");
   }

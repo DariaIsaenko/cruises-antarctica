@@ -4,18 +4,18 @@
   box-sizing: border-box;
   max-width: 1366px;
   margin: 0 auto;
-  padding: 120px 103px 110px;
+  padding: 120px 103px 120px;
 
   @media (max-width: $vp-1365) {
     max-width: 768px;
-    padding: 100px 45px 93px;
+    padding: 100px 45px 95px;
     column-gap: 30px;
   }
 
   @media (max-width: $vp-767) {
     flex-direction: column-reverse;
     max-width: 320px;
-    padding: 57px 15px 64px;
+    padding: 57px 15px 65px;
     column-gap: 0;
     row-gap: 13px;
   }
@@ -29,9 +29,9 @@
   background-position: center;
   background-size: cover;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/map-desktop@2x.webp");
-    }
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-desktop@2x.webp");
+  }
 
   &::before {
     position: absolute;
@@ -70,7 +70,7 @@
     &::before {
       bottom: 0;
       left: 50%;
-      transform: translate(-33px,-63px);
+      transform: translate(-33px, -63px);
     }
   }
 }
@@ -124,7 +124,7 @@
   display: flex;
   margin-bottom: 20px;
 
-  @media (max-width:$vp-767) {
+  @media (max-width: $vp-767) {
     margin-bottom: 20px;
   }
 }
@@ -156,19 +156,23 @@
   color: $color-tangaroa;
   cursor: pointer;
 
-  @media (min-width:$vp-1366) {
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-      outline: none;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   &:active {
     opacity: 0.3;
   }
 
-  @media (max-width:$vp-767) {
+  @media (max-width: $vp-1366) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: $vp-767) {
     margin-bottom: 25px;
   }
 }
