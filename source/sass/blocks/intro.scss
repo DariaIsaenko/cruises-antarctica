@@ -1,14 +1,14 @@
 .intro__wrapper {
-  max-width: 512px;
-  padding: 55px 0 66px;
+  align-self: center;
+  width: 44.5%;
 
-  @media (max-width: $vp-1365) {
-    max-width: 324px;
+  @media (max-width: $vp-1023) {
+    width: 48%;
     padding: 0;
   }
 
   @media (max-width: $vp-767) {
-    max-width: 290px;
+    width: 100%;
   }
 }
 
@@ -21,7 +21,7 @@
   line-height: 42px;
   color: $color-tangaroa;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-bottom: 16px;
     font-size: 26px;
     line-height: 36px;
@@ -42,7 +42,7 @@
   line-height: 24px;
   color: $color-tangaroa;
 
-  @media (max-width: $vp-767) {
+  @media (max-width: $vp-1023) {
     margin-bottom: 40px;
   }
 
@@ -52,17 +52,20 @@
 }
 
 .intro__img {
-  width: 560px;
+  width: 48%;
   height: 301px;
 
-  @media (max-width: $vp-1365) {
-    width: 324px;
+  @media (max-width: $vp-1023) {
+    align-self: flex-start;
+    width: 47.5%;
     height: 264px;
+    padding-top: 9px;
   }
 
   @media (max-width: $vp-767) {
     width: 290px;
     height: 186px;
+    padding-top: 0;
   }
 }
 

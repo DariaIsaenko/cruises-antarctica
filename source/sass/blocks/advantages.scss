@@ -11,7 +11,7 @@
     background-image: url("../img/advantages-bg-desktop@2x.webp");
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     min-height: 588px;
     background-image: url("../img/advantages-bg-tablet.webp");
     box-shadow: none;
@@ -32,19 +32,19 @@
 }
 
 .advantages__wrapper {
-  padding: 110px 103px 89px;
-  max-width: 1366px;
+  padding: 110px 0 89px;
+  max-width: #{"min(85%, 1160px)"};
   margin: 0 auto;
   box-sizing: border-box;
 
-  @media (max-width: $vp-1365) {
-    padding: 90px 45px 70px;
-    max-width: 768px;
+  @media (max-width: $vp-1023) {
+    padding: 90px 0 70px;
+    max-width: #{"min(88.5%, 934px)"};
   }
 
   @media (max-width: $vp-767) {
-    padding: 58px 15px 65px;
-    max-width: 320px;
+    padding: 58px 0 65px;
+    max-width: #{"min(91%, 390px)"};
   }
 }
 
@@ -57,7 +57,7 @@
   text-align: center;
   color: $color-tangaroa;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     font-size: 26px;
     line-height: 39px;
     margin-bottom: 49px;
@@ -71,14 +71,19 @@
 }
 
 .advantages__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
 
+  @media (max-width: $vp-1023) {
+    gap: 30px;
+  }
+
   @media (max-width: $vp-767) {
+    display: flex;
     flex-direction: column;
     row-gap: 30px;
   }
@@ -87,14 +92,13 @@
 .advantages__item {
   position: relative;
   box-sizing: border-box;
-  width: 360px;
   min-height: 241px;
   padding: 78px 23px 25px 30px;
   margin-bottom: 30px;
   background-color: $color-alice-blue;
 
-  @media (max-width: $vp-1365) {
-    width: 207px;
+  @media (max-width: $vp-1023) {
+    min-width: 207px;
     padding: 71px 16px 20px 20px;
   }
 
@@ -112,14 +116,14 @@
   top: 30px;
   left: 30px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     top: 25px;
     left: 20px;
   }
 }
 
 .advantages__item--ship svg {
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 21px;
     height: 26px;
   }
@@ -128,7 +132,7 @@
 .advantages__item--check-mark svg {
   transform: translateY(5px);
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 33px;
     height: 19px;
     transform: translateY(4px);
@@ -138,7 +142,7 @@
 .advantages__item--boat svg {
   transform: translateY(8px);
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 38px;
     height: 13px;
     transform: translateY(7px);
@@ -154,7 +158,7 @@
   line-height: 27px;
   color: $color-tangaroa;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     line-height: 25px;
   }
 }

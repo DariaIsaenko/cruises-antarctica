@@ -71,8 +71,6 @@ a {
 
 .page-header__wrapper {
   position: relative;
-  width: 1366px;
-  margin: auto;
 }
 
 .page-header__main-nav {
@@ -88,8 +86,8 @@ a {
   margin: auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 1366px;
-  padding: 33px 91px 35px 103px;
+  max-width: min(86%, 1180px);
+  padding: 33px 0 35px;
   background-color: transparent;
 }
 
@@ -106,7 +104,7 @@ a {
 }
 
 .main-nav__item {
-  margin-right: 7px;
+  margin-right: 6px;
 }
 
 .main-nav__item:nth-last-child(1) {
@@ -138,7 +136,7 @@ a {
 }
 
 .main-nav__link.main-nav__link--logo {
-  padding: 0;
+  padding: 0 10px;
 }
 
 .main-nav__link--logo svg {
@@ -151,6 +149,10 @@ a {
   display: none;
 }
 
+.main-nav__overlay {
+  display: none;
+}
+
 .main__intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,11 +160,14 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 1366px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: min(86%, 1160px);
   margin: auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 120px 103px 105px;
+  padding: 120px 0;
 }
 
 .inner-header--background {
@@ -180,7 +185,7 @@ a {
 }
 
 .inner-header__wrapper {
-  max-width: 970px;
+  max-width: min(71%, 970px);
   padding: 270px 0 268px;
   margin: 0 auto;
 }
@@ -206,8 +211,10 @@ a {
 }
 
 .intro__wrapper {
-  max-width: 512px;
-  padding: 55px 0 66px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  width: 44.5%;
 }
 
 .intro__wrapper h2 {
@@ -231,7 +238,7 @@ a {
 }
 
 .intro__img {
-  width: 560px;
+  width: 48%;
   height: 301px;
 }
 
@@ -248,11 +255,13 @@ a {
   background-position: center;
   background-size: cover;
   background-color: #e3ecf6;
+  min-height: 562px;
+  background-image: url("../img/advantages-bg-desktop.webp");
 }
 
 .advantages__wrapper {
-  padding: 110px 103px 89px;
-  max-width: 1366px;
+  padding: 110px 0 89px;
+  max-width: min(85%, 1160px);
   margin: 0 auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -269,14 +278,11 @@ a {
 }
 
 .advantages__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -286,7 +292,6 @@ a {
   position: relative;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 360px;
   min-height: 241px;
   padding: 78px 23px 25px 30px;
   margin-bottom: 30px;
@@ -332,8 +337,8 @@ a {
 }
 
 .catalog__wrapper {
-  max-width: 1366px;
-  padding: 110px 118px 119px;
+  max-width: min(85%, 1130px);
+  padding: 110px 0 119px;
   margin: auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -342,8 +347,7 @@ a {
 .catalog__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (260px)[4];
-  grid-template-columns: repeat(4, 260px);
+  grid-template-columns: repeat(auto-fill, 260px);
   gap: 30px;
   margin: 0 auto;
   padding: 0;
@@ -375,7 +379,7 @@ a {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  min-height: 386px;
+  height: 386px;
   padding: 30px 25px 17px 30px;
 }
 
@@ -391,6 +395,7 @@ a {
 
 .catalog__item img {
   position: absolute;
+  width: 100%;
   content: "";
   top: 0;
   left: 0;
@@ -429,6 +434,7 @@ a {
 }
 
 .card__list {
+  overflow-y: auto;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -507,13 +513,14 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 1366px;
+  max-width: min(76%, 1040px);
   min-height: 555px;
   margin: auto;
-  padding: 50px 163px;
+  padding: 50px 0;
 }
 
 .booking__promo {
+  max-width: min(48%, 493px);
   padding: 162px 0;
 }
 
@@ -707,41 +714,34 @@ form input::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-column-gap: 100px;
   -moz-column-gap: 100px;
   column-gap: 100px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1366px;
+  max-width: min(85%, 1160px);
   margin: 0 auto;
-  padding: 120px 103px 120px;
+  padding: 120px 0;
 }
 
 .contacts__map {
   position: relative;
-  min-width: 560px;
   height: 306px;
   background-image: url("../img/map-desktop.webp");
   background-position: center;
   background-size: cover;
 }
 
-.contacts__map::before {
-  position: absolute;
-  content: url("../img/sprite/marker-address-icon.svg");
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-30px, -60px);
-  -ms-transform: translate(-30px, -60px);
-  transform: translate(-30px, -60px);
-}
-
 .contacts__map-address {
-  width: 560px;
+  max-width: min(100%, 560px);
   height: 306px;
 }
 
 .contacts__info {
+  max-width: min(43%, 500px);
   padding: 74px 0 42px;
 }
 
@@ -811,8 +811,8 @@ form input::placeholder {
   justify-content: space-between;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1366px;
-  padding: 49px 88px 40px;
+  max-width: min(87%, 1189px);
+  padding: 49px 0 40px;
   margin: 0 auto;
   background-color: #011c40;
 }
@@ -824,11 +824,11 @@ form input::placeholder {
 }
 
 .footer-main__link {
-  padding: 0 15px;
-  margin-right: 5px;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+  padding: 0 15px;
+  margin-right: 11px;
 }
 
 .footer-main__link:hover,
@@ -847,14 +847,10 @@ form input::placeholder {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 750px;
+  max-width: 640px;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.footer-nav__item {
-  margin-right: 10px;
 }
 
 .footer-nav__link {
@@ -908,44 +904,10 @@ form input::placeholder {
   vertical-align: baseline;
 }
 
-@media (min-width: 1366px) {
-  .inner-header--background {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    min-height: 650px;
-    background-image: url("../img/main-background-desktop.webp");
-  }
-
-  .advantages--background {
-    min-height: 562px;
-    background-image: url("../img/advantages-bg-desktop.webp");
-  }
-}
-
-@media (min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1366px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1366px) and (min-resolution: 2dppx) {
-  .inner-header--background {
-    background-image: url("../img/main-background-desktop@2x.webp");
-  }
-
-  .advantages--background {
-    background-image: url("../img/advantages-bg-desktop@2x.webp");
-  }
-}
-
-@media (max-width: 1366px) {
-  .contacts__phone:hover {
-    opacity: 1;
-  }
-}
-
-@media (max-width: 1365px) {
-  .page-header__wrapper {
-    width: 768px;
-  }
-
+@media (max-width: 1023px) {
   .page-header__main-nav {
-    width: 768px;
-    padding: 27px 27px 27px 46px;
+    max-width: min(92%, 941px);
+    padding: 19px 0;
   }
 
   .main-nav__list {
@@ -954,11 +916,11 @@ form input::placeholder {
   }
 
   .main-nav__item {
-    margin-right: 13px;
+    margin-right: 0;
   }
 
   .main-nav__link {
-    padding: 5px;
+    padding: 13px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -971,7 +933,7 @@ form input::placeholder {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
-    padding: 0;
+    padding: 0 15px;
   }
 
   .main-nav__link--logo svg {
@@ -980,12 +942,12 @@ form input::placeholder {
   }
 
   .main__intro {
-    width: 768px;
+    max-width: min(88%, 934px);
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     margin: 0 auto;
-    padding: 91px 45px 83px;
+    padding: 91px 0 53px;
   }
 
   .inner-header--background {
@@ -996,7 +958,7 @@ form input::placeholder {
   }
 
   .inner-header__wrapper {
-    max-width: 678px;
+    max-width: min(88%, 933px);
     padding: 269px 0 271px;
     margin: 0 auto;
   }
@@ -1014,7 +976,7 @@ form input::placeholder {
   }
 
   .intro__wrapper {
-    max-width: 324px;
+    width: 48%;
     padding: 0;
   }
 
@@ -1024,9 +986,16 @@ form input::placeholder {
     line-height: 36px;
   }
 
+  .intro__wrapper p {
+    margin-bottom: 40px;
+  }
+
   .intro__img {
-    width: 324px;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    width: 47.5%;
     height: 264px;
+    padding-top: 9px;
   }
 
   .advantages--background {
@@ -1037,8 +1006,8 @@ form input::placeholder {
   }
 
   .advantages__wrapper {
-    padding: 90px 45px 70px;
-    max-width: 768px;
+    padding: 90px 0 70px;
+    max-width: min(88.5%, 934px);
   }
 
   .advantages__wrapper h2 {
@@ -1047,8 +1016,12 @@ form input::placeholder {
     margin-bottom: 49px;
   }
 
+  .advantages__list {
+    gap: 30px;
+  }
+
   .advantages__item {
-    width: 207px;
+    min-width: 207px;
     padding: 71px 16px 20px 20px;
   }
 
@@ -1088,8 +1061,7 @@ form input::placeholder {
   }
 
   .catalog__list {
-    -ms-grid-columns: (309px)[2];
-    grid-template-columns: repeat(2, 309px);
+    grid-template-columns: repeat(auto-fill, 309px);
   }
 
   .catalog__wrapper h2 {
@@ -1120,16 +1092,17 @@ form input::placeholder {
   }
 
   .booking__wrapper {
-    width: 100%;
+    max-width: min(55%, 419px);
     min-height: 805px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 89px 174px 100px 175px;
+    padding: 89px 0 100px;
   }
 
   .booking__promo {
+    max-width: 100%;
     padding: 0;
     margin-bottom: 50px;
   }
@@ -1165,11 +1138,11 @@ form input::placeholder {
   }
 
   .contacts__wrapper {
-    max-width: 768px;
-    padding: 100px 45px 95px;
+    max-width: min(88%, 934px);
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
+    padding: 100px 0 95px;
   }
 
   .contacts__map {
@@ -1178,34 +1151,30 @@ form input::placeholder {
     background-image: url("../img/map-tablet.webp");
   }
 
-  .contacts__map::before {
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translate(-35px, -87px);
-    -ms-transform: translate(-35px, -87px);
-    transform: translate(-35px, -87px);
-  }
-
   .contacts__map-address {
-    width: 324px;
     height: 335px;
   }
 
   .contacts__info {
-    padding: 67px 0 42px;
+    max-width: min(53%, 500px);
+    padding: 67px 0 43px;
   }
 
   .contacts__info p {
-    margin-bottom: 28px;
+    margin-bottom: 27px;
   }
 
   .contacts__address span {
     width: 255px;
   }
 
+  .contacts__phone:hover {
+    opacity: 1;
+  }
+
   .footer-main__wrapper {
-    max-width: 768px;
-    padding: 40px 33px 36px 35px;
+    max-width: min(91%, 934px);
+    padding: 40px 0 36px;
   }
 
   .footer-main__link {
@@ -1223,7 +1192,7 @@ form input::placeholder {
   }
 
   .footer-nav__list {
-    max-width: 650px;
+    max-width: 520px;
   }
 
   .footer-nav__item {
@@ -1264,7 +1233,7 @@ form input::placeholder {
   }
 }
 
-@media (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1365px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1365px) and (min-resolution: 2dppx) {
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
   .inner-header--background {
     background-image: url("../img/main-background-tablet@2x.webp");
   }
@@ -1289,7 +1258,7 @@ form input::placeholder {
   }
 
   .page-header__main-nav {
-    width: 100%;
+    max-width: min(99%, 738px);
     padding: 0;
   }
 
@@ -1375,6 +1344,7 @@ form input::placeholder {
 
   .main-nav.is-opened .main-nav__list {
     display: block;
+    overflow-y: auto;
     padding: 18px 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1393,15 +1363,23 @@ form input::placeholder {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     -ms-flex-line-pack: start;
-    align-content: flex-start;
+    align-content: start;
     left: 35px;
     width: calc(100% - 35px);
     min-height: 565px;
     height: 100%;
     padding-top: 10px;
     background-color: #f9fbfd;
-    -webkit-box-shadow: -35px 0 0 0 rgba(0, 43, 102, 0.5);
-    box-shadow: -35px 0 0 0 rgba(0, 43, 102, 0.5);
+  }
+
+  .main-nav.is-opened .main-nav__overlay {
+    position: absolute;
+    display: block;
+    left: -35px;
+    top: 0;
+    width: 35px;
+    height: 100%;
+    background: rgba(0, 43, 102, 0.5);
   }
 
   .main-nav__link {
@@ -1431,6 +1409,7 @@ form input::placeholder {
 
   .main-nav.is-nojs {
     position: static;
+    overflow-y: auto;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -1475,11 +1454,12 @@ form input::placeholder {
 
   .main__intro {
     width: 320px;
+    max-width: min(90%, 290px);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 57px 15px 65px;
+    padding: 57px 0 65px;
   }
 
   .inner-header--background {
@@ -1488,7 +1468,7 @@ form input::placeholder {
   }
 
   .inner-header__wrapper {
-    max-width: 290px;
+    max-width: min(90%, 738px);
     padding: 177px 0 153px;
     margin: 0 auto;
   }
@@ -1506,16 +1486,12 @@ form input::placeholder {
   }
 
   .intro__wrapper {
-    max-width: 290px;
+    width: 100%;
   }
 
   .intro__wrapper h2 {
     font-size: 24px;
     line-height: 34px;
-  }
-
-  .intro__wrapper p {
-    margin-bottom: 40px;
   }
 
   .intro__wrapper p {
@@ -1525,6 +1501,7 @@ form input::placeholder {
   .intro__img {
     width: 290px;
     height: 186px;
+    padding-top: 0;
   }
 
   .advantages--background {
@@ -1533,8 +1510,8 @@ form input::placeholder {
   }
 
   .advantages__wrapper {
-    padding: 58px 15px 65px;
-    max-width: 320px;
+    padding: 58px 0 65px;
+    max-width: min(91%, 390px);
   }
 
   .advantages__wrapper h2 {
@@ -1544,6 +1521,9 @@ form input::placeholder {
   }
 
   .advantages__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1559,8 +1539,8 @@ form input::placeholder {
   }
 
   .catalog__wrapper {
-    width: 100%;
-    padding: 56px 25px 65px;
+    max-width: min(85%, 718px);
+    padding: 56px 0 65px;
   }
 
   .catalog__list {
@@ -1571,7 +1551,7 @@ form input::placeholder {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 100%;
+    max-width: clamp(270px, 90%, 309px);
   }
 
   .catalog__wrapper h2 {
@@ -1599,9 +1579,9 @@ form input::placeholder {
   }
 
   .booking__wrapper {
-    width: 100%;
+    max-width: min(90%, 738px);
     min-height: 760px;
-    padding: 59px 15px 65px;
+    padding: 59px 0 65px;
   }
 
   .booking__promo {
@@ -1666,8 +1646,8 @@ form input::placeholder {
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
-    max-width: 320px;
-    padding: 57px 15px 65px;
+    max-width: min(90%, 500px);
+    padding: 57px 0 65px;
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
     column-gap: 0;
@@ -1680,25 +1660,20 @@ form input::placeholder {
     background-image: url("../img/map-mobile.webp");
   }
 
-  .contacts__map::before {
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translate(-33px, -63px);
-    -ms-transform: translate(-33px, -63px);
-    transform: translate(-33px, -63px);
-  }
-
   .contacts__map-address {
-    width: 290px;
     height: 316px;
   }
 
   .contacts__info {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    max-width: 100%;
     padding: 0;
   }
 
   .contacts__info p {
-    margin-bottom: 27px;
+    margin-bottom: 28px;
   }
 
   .contacts__address {
@@ -1717,7 +1692,8 @@ form input::placeholder {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    padding: 40px 15px 23px 3px;
+    max-width: min(98%, 738px);
+    padding: 40px 0 23px;
   }
 
   .footer-main__nav {
@@ -1776,6 +1752,10 @@ form input::placeholder {
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .inner-header--background {
     background-image: url("../img/main-background-desktop@2x.webp");
+  }
+
+  .advantages--background {
+    background-image: url("../img/advantages-bg-desktop@2x.webp");
   }
 
   .booking--background {

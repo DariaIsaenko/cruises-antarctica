@@ -11,7 +11,7 @@
     background-image: url("../img/booking-background-desktop@2x.webp");
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     min-height: 805px;
     background-image: url("../img/booking-background-tablet.webp");
 
@@ -34,29 +34,31 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  max-width: 1366px;
+  max-width: #{"min(76%, 1040px)"};
   min-height: 555px;
   margin: auto;
-  padding: 50px 163px;
+  padding: 50px 0;
 
-  @media (max-width: $vp-1365) {
-    width: 100%;
+  @media (max-width: $vp-1023) {
+    max-width: #{"min(55%, 419px)"};
     min-height: 805px;
     flex-direction: column;
-    padding: 89px 174px 100px 175px;
+    padding: 89px 0 100px;
   }
 
   @media (max-width: $vp-767) {
-    width: 100%;
+    max-width: #{"min(90%, 738px)"};
     min-height: 760px;
-    padding: 59px 15px 65px;
+    padding: 59px 0 65px;
   }
 }
 
 .booking__promo {
+  max-width: #{"min(48%, 493px)"};
   padding: 162px 0;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
+    max-width: 100%;
     padding: 0;
     margin-bottom: 50px;
   }
@@ -74,7 +76,7 @@
   line-height: 60px;
   color: $color-tangaroa;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 34px;
@@ -98,7 +100,7 @@
   line-height: 27px;
   color: $color-tangaroa;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin: auto;
     font-weight: 400;
     font-size: 18px;
@@ -119,7 +121,7 @@
   padding: 45px 50px 50px;
   background-color: $color-tangaroa;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     align-self: center;
   }
 

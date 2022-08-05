@@ -1,36 +1,36 @@
 .catalog__wrapper {
-  max-width: 1366px;
-  padding: 110px 118px 119px;
+  max-width: #{"min(85%, 1130px)"};
+  padding: 110px 0 119px;
   margin: auto;
   box-sizing: border-box;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     max-width: 768px;
     padding: 90px 60px 100px;
   }
 
   @media (max-width: $vp-767) {
-    width: 100%;
-    padding: 56px 25px 65px;
+    max-width: #{"min(85%, 718px)"};
+    padding: 56px 0 65px;
   }
 }
 
 .catalog__list {
   display: grid;
-  grid-template-columns: repeat(4, 260px);
+  grid-template-columns: repeat(auto-fill, 260px);
   gap: 30px;
   margin: 0 auto;
   padding: 0;
   list-style: none;
 
-  @media (max-width: $vp-1365) {
-    grid-template-columns: repeat(2, 309px);
+  @media (max-width: $vp-1023) {
+    grid-template-columns: repeat(auto-fill, 309px);
   }
 
   @media (max-width: $vp-767) {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: #{"clamp(270px, 90%, 309px)"};
   }
 }
 
@@ -44,7 +44,7 @@
   text-align: center;
   color: $color-tangaroa;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     font-size: 26px;
     line-height: 39px;
   }
@@ -62,10 +62,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 386px;
+  height: 386px;
   padding: 30px 25px 17px 30px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     padding: 35px 35px 20px;
   }
 
@@ -86,13 +86,14 @@
 
 .catalog__item img {
   position: absolute;
+  width: 100%;
   content: "";
   top: 0;
   left: 0;
   z-index: -1;
   object-fit: cover;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 309px;
   }
 

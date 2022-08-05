@@ -35,7 +35,7 @@ form input {
     outline: none;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     &:hover {
       opacity: 1;
     }
@@ -148,7 +148,7 @@ form input::placeholder {
     opacity: 0.3;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     &:hover {
       opacity: 1;
     }

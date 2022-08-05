@@ -13,7 +13,7 @@
     background-image: url("../img/main-background-desktop@2x.webp");
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     min-height: 638px;
     background-image: url("../img/main-background-tablet.webp");
     box-shadow: none;
@@ -34,18 +34,18 @@
 }
 
 .inner-header__wrapper {
-  max-width: 970px;
+  max-width: #{"min(71%, 970px)"};
   padding: 270px 0 268px;
   margin: 0 auto;
 
-  @media (max-width: $vp-1365) {
-    max-width: 678px;
+  @media (max-width: $vp-1023) {
+    max-width: #{"min(88%, 933px)"};
     padding: 269px 0 271px;
     margin: 0 auto;
   }
 
   @media (max-width: $vp-767) {
-    max-width: 290px;
+    max-width: #{"min(90%, 738px)"};
     padding: 177px 0 153px;
     margin: 0 auto;
   }
@@ -60,7 +60,7 @@
   line-height: 66px;
   color: $color-alice-blue;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-bottom: 17px;
     font-size: 50px;
     line-height: 61px;
@@ -82,7 +82,7 @@
   line-height: 24px;
   color: $color-alice-blue;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-bottom: 10px;
     font-size: 18px;
     line-height: 10px;

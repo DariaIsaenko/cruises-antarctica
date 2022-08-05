@@ -1,13 +1,13 @@
 .footer-nav__list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 750px;
+  max-width: 640px;
   margin: 0;
   padding: 0;
   list-style: none;
 
-  @media (max-width: $vp-1365) {
-    max-width: 650px;
+  @media (max-width: $vp-1023) {
+    max-width: 520px;
   }
 
   @media (max-width: $vp-767) {
@@ -17,9 +17,9 @@
 }
 
 .footer-nav__item {
-  margin-right: 10px;
+  // margin-right: 10px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-right: 0;
   }
 }
@@ -44,7 +44,7 @@
     opacity: 0.3;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     padding: 11px;
     font-size: 12px;
     line-height: 15px;

@@ -4,6 +4,7 @@ const body = document.querySelector('.page__body');
 const advantagesLink = document.querySelector('.main-nav__link--advantages');
 const catalogLink = document.querySelector('.main-nav__link--catalog');
 const contactsLink = document.querySelector('.main-nav__link--contacts');
+const overlay = document.querySelector('.main-nav__overlay');
 
 navMain.classList.remove('is-nojs');
 
@@ -11,20 +12,33 @@ function getBodyScrollTop() {
   return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
 }
 
+function closeMenu() {
+  navMain.classList.add('is-closed');
+  navMain.classList.remove('is-opened');
+  body.classList.remove('is-locked');
+}
+
+function openMenu() {
+  navMain.classList.remove('is-closed');
+  navMain.classList.add('is-opened');
+  body.classList.add('is-locked');
+}
+
 navToggle.addEventListener('click', () => {
 
   if (navMain.classList.contains('is-closed')) {
     body.dataset.scrollY = getBodyScrollTop();
     body.style.top = `-${body.dataset.scrollY}px`;
-    navMain.classList.remove('is-closed');
-    navMain.classList.add('is-opened');
-    body.classList.add('is-locked');
+    openMenu();
   } else {
-    navMain.classList.add('is-closed');
-    navMain.classList.remove('is-opened');
-    body.classList.remove('is-locked');
+    closeMenu();
     window.scrollTo(0, body.dataset.scrollY);
   }
+});
+
+overlay.addEventListener('click', () => {
+  closeMenu();
+  window.scrollTo(0, body.dataset.scrollY);
 });
 
 function getSmoothScrolling(element) {
@@ -37,9 +51,7 @@ function getSmoothScrolling(element) {
 
 function getLinkMobile(element) {
   if (navMain.classList.contains('is-opened')) {
-    navMain.classList.add('is-closed');
-    navMain.classList.remove('is-opened');
-    body.classList.remove('is-locked');
+    closeMenu();
     getSmoothScrolling(document.getElementById(element));
   }
 }
