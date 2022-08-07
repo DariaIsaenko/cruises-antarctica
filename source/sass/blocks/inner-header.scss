@@ -51,6 +51,10 @@
   }
 }
 
+.inner-header__wrapper--hidden {
+  opacity: 0;
+}
+
 .inner-header__wrapper h1 {
   margin: 0;
   margin-bottom: 13px;

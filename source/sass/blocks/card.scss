@@ -1,5 +1,8 @@
-.card--state:hover,
-.card--state:focus {
+.card__wrapper {
+  display: none;
+}
+
+.card--state:hover {
   justify-content: space-between;
   padding: 29px 25px 35px;
   background-color: $color-tangaroa;
@@ -21,8 +24,18 @@
   }
 }
 
-.card__wrapper {
-  display: none;
+.card--state:focus-within {
+  justify-content: space-between;
+  padding: 29px 25px 35px;
+  background-color: $color-tangaroa;
+  outline: none;
+
+  .card__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+  }
 }
 
 .card__list {

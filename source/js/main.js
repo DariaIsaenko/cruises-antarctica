@@ -5,6 +5,7 @@ const advantagesLink = document.querySelector('.main-nav__link--advantages');
 const catalogLink = document.querySelector('.main-nav__link--catalog');
 const contactsLink = document.querySelector('.main-nav__link--contacts');
 const overlay = document.querySelector('.main-nav__overlay');
+const innerHeader = document.querySelector('.inner-header__wrapper');
 
 navMain.classList.remove('is-nojs');
 
@@ -16,11 +17,13 @@ function closeMenu() {
   navMain.classList.add('is-closed');
   navMain.classList.remove('is-opened');
   body.classList.remove('is-locked');
+  innerHeader.classList.remove('inner-header__wrapper--hidden');
 }
 
 function openMenu() {
   navMain.classList.remove('is-closed');
   navMain.classList.add('is-opened');
+  innerHeader.classList.add('inner-header__wrapper--hidden');
   body.classList.add('is-locked');
 }
 
