@@ -43,7 +43,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 58px 0 65px;
+    padding: 58px 0 33px;
     max-width: #{"min(91%, 390px)"};
   }
 }
@@ -85,7 +85,7 @@
   @media (max-width: $vp-767) {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    gap: 0;
   }
 }
 
@@ -106,7 +106,7 @@
     width: 100%;
     min-height: 250px;
     padding: 72px 15px 19px 20px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 }
 

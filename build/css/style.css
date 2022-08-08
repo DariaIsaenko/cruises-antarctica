@@ -31,6 +31,7 @@
 }
 
 html {
+  height: 100%;
   scroll-behavior: smooth;
 }
 
@@ -39,6 +40,7 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   min-width: 320px;
+  height: 100%;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -62,6 +64,24 @@ a {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.page__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+.page-body__content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .page-body.is-locked {
@@ -403,7 +423,6 @@ a {
 .catalog__item img {
   position: absolute;
   width: 100%;
-  content: "";
   top: 0;
   left: 0;
   z-index: -1;
@@ -729,6 +748,12 @@ form input::placeholder {
 
 .form__button:active {
   opacity: 0.3;
+}
+
+.page-footer__wrapper {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .page-footer__main-content {
@@ -1389,7 +1414,6 @@ form input::placeholder {
     align-content: start;
     left: 35px;
     width: calc(100% - 35px);
-    min-height: 565px;
     height: 100%;
     padding-top: 10px;
     background-color: #f9fbfd;
@@ -1533,7 +1557,7 @@ form input::placeholder {
   }
 
   .advantages__wrapper {
-    padding: 58px 0 65px;
+    padding: 58px 0 33px;
     max-width: min(91%, 390px);
   }
 
@@ -1551,19 +1575,19 @@ form input::placeholder {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    row-gap: 30px;
+    gap: 0;
   }
 
   .advantages__item {
     width: 100%;
     min-height: 250px;
     padding: 72px 15px 19px 20px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 
   .catalog__wrapper {
     max-width: min(85%, 718px);
-    padding: 56px 0 65px;
+    padding: 58px 0 65px;
   }
 
   .catalog__list {
